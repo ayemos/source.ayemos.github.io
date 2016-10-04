@@ -8,7 +8,7 @@ env:
         - GIT_AUTHOR_EMAIL=ayemos.y@gmail.com
         - secure: jJHiGRsKbzWtEY7VbvBMK1Nd+KHVYAnT76AbS4a4GmBlTJ09+8teur+ekVgjo1LvK1B6a/oSHRUbGHbO7VASpUoeGTlIkaTYdJh/Fb9j9Ivguhobp1TDfpQoactlCB8z1/l/AzNHuQU5zyiKsTX8P/ZZEeIKGy0fkZeBjnUaA3Ol9rOT2nQa8Kgv3VUDW2PjkDgQSv1223LjEDwNwflRQdWWWzpaKgKMI8X/Ka6Uk37gwJ9k7Vmk8NVVq9zLD5E5R3v8svi022FgD1/1TrylbnrzeAbfKgut+pzpdG/kXXSh7dczspKsifUSPnr8mb/FhUQhL592q/MrNaQmxfc9e1gk4obpx1bzqujj2Mv2cWGrFuSdFpWI5YpcZrQQd51PmB1yT+8yU3haCdhKJa3P/DstUL7rmmkndxzOVpPXVn3zmycnQ3Asnuc3chDbSjWp2YJ0uBrjaPfXhoyCa8OUG2WAhtlQbhtugJ/FqXs3LBaAVyjpEDX/8VjfhnG5KeiwVPLDuHyRJL3VgWsuGa+AWoW8RHR2ReXn15aRpV9U3RUr3JGexINfGqGnTotN7FWmG9e2f/4x2MkY0/14AcN0MZ55Hm77im9V+F0jvQKpTHDxH5yJ9mYAAG5MKMoCVNckgFxXk8iNz+4mbWmUn2hAAa5+R9oJosLh2mMj2jAXP1Y=
 before_script:
-    - git clone --quiet https://github.com/ayemos/ayemos.me.git build
+    - git clone --quiet https://github.com/ayemos/ayemos.github.io.git build
     - pushd build
     - git checkout -b gh-pages
     - popd
@@ -16,4 +16,4 @@ after_success:
     - cd build
     - git add -A
     - git commit -m 'Update'
-    - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/ayemos/ayemos.me.git gh-pages 2> /dev/null'
+    - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/ayemos/ayemos.github.io.git gh-pages 2> /dev/null'
