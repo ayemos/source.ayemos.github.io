@@ -1,0 +1,18 @@
+---
+language: ruby
+script: bundle exec middleman build
+env:
+    global:
+        - GIT_COMMITTER_NAME=Yuichiro Someya
+        - GIT_COMMITTER_EMAIL=ayemos.y@gmail.com
+        - GIT_AUTHOR_NAME=Yuichiro Someya
+        - GIT_AUTHOR_EMAIL=ayemos.y@gmail.com
+before_script:
+    - git clone --quiet https://github.com/ayemos/ayemos.me.gi://github.com/ayemos/ayemos.me.git build
+    - pushd build
+    - git checkout -b gh-pages
+    - popd
+after_success:
+    - cd build
+    - git add -A
+    - git commit -m 'Update'
