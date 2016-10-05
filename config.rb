@@ -11,6 +11,7 @@ page '/*.txt', layout: false
 
 page "/*.html", layout: 'application'
 page '/stylesheets/*.scss', layout: false
+page '/javascripts/*.js', layout: false
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout

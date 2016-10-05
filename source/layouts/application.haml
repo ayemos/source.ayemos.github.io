@@ -7,7 +7,10 @@
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     %title ayemos
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
+    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
     = stylesheet_link_tag 'stylesheets/application'
+    = javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+    = javascript_include_tag 'javascripts/application'
   %body
     #navbar
       = partial 'layouts/navbar'
