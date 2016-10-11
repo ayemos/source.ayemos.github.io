@@ -6,7 +6,7 @@ env:
   - GIT_COMMITTER_EMAIL=ayemos.y@gmail.com
   - GIT_AUTHOR_NAME=Yuichiro Someya
   - GIT_AUTHOR_EMAIL=ayemos.y@gmail.com
-  - secure: 057P53SSIoaiGOSyG+BocRtUppT1LuA/tLvQZoMQK5nMCbJT5bRMe3O5olaer8jhda4kI0rnedDlA0YWI8b6M2/cbAh13XpJuhvagaepTQ+21mYS9S62i/6mDY15qLTWmU+PDRB1nR93I2wv8K1X8f1n10ecTRi8cEr3giGnJbYe9IYCW2dAadeud2N4hIAsJAYW3pMCRH9E/SrzwQIgqGmrpNF8lKAsn8ftQTxsKu9KkAlSufylzRbMIpIt6HMaRSantY3snAJMDgDxdQrn+o8ZPL+IN3DX4lCt+lffaWiKcOe/GRV/+zK+n/bKQskJv2OIsdqXuCQD1T387V1IzDMfIJQwgfGSVPsZ6JTpIBMuHyaiZVcBmMvk6yUE7nBu6qVtpvsT5CE97qW4Wq9chXvwTVkFA7rfKT53GedKNggTAuSBxvFE8LlDchi/lmMZIPrrxNJMTLhmWUN7P+7Tq09k+Gqg7Kd0dK6pjKMPNFmWwG2KDvFwwUZzrc1kUeNx5ejMsayjOHg/xfPtjutA3pbf/NX9oN+IetxUkdPV1iRBHhnUQDMK1SfHj0zadsLK3f+6IfGNWTNEbsM+zSRY6VQeQofc/QHJYFKg81BvYRwnMyrMz1+gLR5b28HAvEw6magPtvTlLNgyWkgpU0Y9MRO1w7K1DBl6Or6Oh997Cyg=
+  - secure: brJVv/wgLi5f0erPQjmp3223HahkOi2+lv8mJeGs51yPcfjxO1O//CSZmhdKRw0qQD8b+bI5dMLL8iObr3rxcwdMd9iE0ERayAcVdEJgXrXfGY0nJZGjH0qP9rll+tDsVA0++DSSJn8dZeJGSs0rW4adCe17Fo/1mBzoaCGm9SSs1SWVaa1nKV1Xe0b37Bwb9V9KNCLbpVfEVsgn1w5Zb1l5HJMK+8gQo8Z7cbkklqv8HSq302igWQprE3mU/KH5IhjeVqkbxy+m7Nbybskz3vffF+wPjWkgG+EHxsOx3ab9AGXyQkkcdstHUy3w4nmQCi6UZP0F+RDx21MRDy7SRk8Ns8Q2X0mG3efL+shPqeJvTDTpnoOPcvy61Eod5hGCE27WG4tD5txPI/Qih2L/D+DjHUCO3JA9gMCXvzGoTZ3ilV1OUYnbpqZNofTgL+tIM8Y21W6vXWA1DDVuvRhPQwOHkVqkRIdUD3Uk+SuYzxD9w/7D+7Kc0kI60iUxiq0oA0D1/AogctfQnVyIa9UYjQNzSluwobr2TzsQEqi7Qm5wTGMhr1zks5dSBeUASpOYTb7SroYgp6vV4mycYvea4lJ1JR/+6f8w4XPMRAcyMFxNji+9hDfGvvaZRdwzD1zI+R+yDVY2B5y6EIbvWqQ4sFfS4HH08rWMvk86XCQ3hlQ=
 before_script:
 - git clone --quiet https://github.com/ayemos/source.ayemos.github.io.git
 - git clone --quiet https://github.com/ayemos/ayemos.github.io.git build
@@ -15,4 +15,5 @@ after_success:
 - git add -A
 - git commit -m 'Update'
 - echo $GH_TOKEN
-- '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/ayemos/ayemos.github.io.git master'
+- '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/ayemos/ayemos.github.io.git
+  master'
