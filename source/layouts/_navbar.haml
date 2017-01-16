@@ -1,17 +1,15 @@
-.navbar.navbar-default.navbar-fixed-top
-  .container
-    .navbar-header
-      %button.navbar-toggle{"data-target" => "#navbar-main", "data-toggle" => "collapse", :type => "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-    #navbar-main.navbar-collapse.collapse
-      %ul.nav.navbar-nav
-        %li
-          = link_to 'Blog', '/'
-        %li
-          = link_to 'Profile', '/profile'
-        %li
-          = link_to 'Works', '/works'
-        %li
-          = link_to 'Contact', '/contact'
+.navbar.navbar-fixed-top
+  .container-fluid
+    %ul.nav.nav-pills.navbar-right
+      %li
+        = link_to 'about', '/'
+      %li.nav-vertical-border.nav-vertical-border-01
+      %li
+        = link_to 'id', '/id'
+      %li.nav-vertical-border.nav-vertical-border-02
+      %li
+        = link_to 'blog', '#'
+  .container-full
+    .row
+      .col-lg-12
+        .delimiter.delimiter-01

@@ -1,0 +1,82 @@
+.delimiter {
+  background-image: url('https://dl.dropboxusercontent.com/u/3483627/assets/navbar_border.svg');
+  background-repeat: repeat-x;
+  overflow: hidden;
+  width: 100%;
+  height: 20px;
+}
+
+.delimiter-01 {
+  background-position: 0% 0%;
+}
+
+.delimiter-02 {
+  background-position: 100% 0%;
+}
+
+.delimiter-03 {
+  background-position: 200% 0%;
+}
+
+.delimiter-04 {
+  background-position: 300% 0%;
+}
+
+.nav-vertical-border {
+  width: 15px;
+  height: 50px;
+}
+.nav-vertical-border-01 {
+  background-image: url('https://dl.dropboxusercontent.com/u/3483627/assets/vertical_border_01.svg');
+}
+
+.nav-vertical-border-02 {
+  background-image: url('https://dl.dropboxusercontent.com/u/3483627/assets/vertical_border_02.svg');
+}
+
+.nav-vertical-border-03 {
+  background-image: url('https://dl.dropboxusercontent.com/u/3483627/assets/vertical_border_03.svg');
+}
+
+.nav-vertical-border-04 {
+  background-image: url('https://dl.dropboxusercontent.com/u/3483627/assets/vertical_border_04.svg');
+}
+
+.navbar-right {
+  float: right;
+}
+
+.a {
+}
+
+a {
+  color: #4C6162;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #77869D;
+  background: none !important;
+}
+
+a:hover:before {
+  content: "{";
+  color: #77869D;
+}
+
+a:hover:after {
+  content: "}";
+  color: #77869D;
+}
+
+.id-icon {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  display: inline;
+}
+
+.id-icon-twitter {
+  background-image: url('https://dl.dropboxusercontent.com/u/3483627/assets/twitter.svg');
+}

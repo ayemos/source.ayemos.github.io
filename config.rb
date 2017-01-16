@@ -13,6 +13,9 @@ page "/*.html", layout: 'application'
 page '/stylesheets/*.scss', layout: false
 page '/javascripts/*.js', layout: false
 
+set :images_dir, 'images'
+activate :directory_indexes
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
@@ -24,6 +27,7 @@ page '/javascripts/*.js', layout: false
 # Helpers
 ###
 
+=begin
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
@@ -48,8 +52,8 @@ activate :blog do |blog|
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
 end
+=end
 
-page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
 # configure :development do
 #   activate :livereload
