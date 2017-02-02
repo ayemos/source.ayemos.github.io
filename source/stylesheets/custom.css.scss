@@ -81,3 +81,10 @@ a:hover:after {
 .id-icon-twitter {
   background-image: url('https://dl.dropboxusercontent.com/u/3483627/assets/twitter.svg');
 }
+
+table.table.table-thin {
+  td {
+    font-weight: 100;
+    border: 1px dotted #4C6162;
+  }
+}
