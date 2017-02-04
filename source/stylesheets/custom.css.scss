@@ -1,3 +1,7 @@
+#profile {
+  padding: 40px 0;
+}
+
 .delimiter {
   background-image: url('https://dl.dropboxusercontent.com/u/3483627/assets/navbar_border.svg');
   background-repeat: repeat-x;
@@ -83,8 +87,27 @@ a:hover:after {
 }
 
 table.table.table-thin {
+<<<<<<< HEAD
   td {
     font-weight: 100;
     border: 1px dotted #4C6162;
+=======
+  margin: 10px 0;
+
+  thead {
+    tr {
+      th, td {
+        border-bottom: 1px dotted #4C6162;
+        font-weight: 100;
+      }
+    }
+  }
+
+  tbody {
+    td {
+      border: 1px dotted #4C6162;
+      font-weight: 100;
+    }
+>>>>>>> f8d32e152fa9d694455783c15cd68f8537d53ed6
   }
 }
