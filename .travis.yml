@@ -12,7 +12,6 @@ before_script:
 - git clone --quiet https://github.com/ayemos/ayemos.github.io.git build
 after_success:
 - cd build
-- echo 'www.ayemos.me' > CNAME
 - git add -A
 - git commit -m 'Update'
 - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/ayemos/ayemos.github.io.git
