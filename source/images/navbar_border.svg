@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="770px" height="9px" viewBox="0 0 770 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-    <title>Path</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-7.000000, -51.000000)" stroke="#4C6162">
-            <path d="M7.98828125,55.8125362 C76.5834574,55.8125362 141.346818,60.0987341 210.816946,58.7304591 C236.522416,58.2241673 261.362086,54.9349832 287.068617,54.4352903 C342.607148,53.355712 398.331349,54.4975269 453.938075,54.0045817 C520.032905,53.4186611 508.126932,51.2561815 568.217986,52.3872966 C602.71876,53.0367168 632.716687,57.686564 668.141541,58.2622976 C704.389128,58.8514024 740.713847,58.4245936 777,58.5057416" id="Path"></path>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="817.414px" height="19.871px" viewBox="0 0 817.414 19.871" enable-background="new 0 0 817.414 19.871"
+	 xml:space="preserve">
+<path fill="none" stroke="#4C6162" stroke-miterlimit="10" d="M817.379,14.371c-38.713,0-49.254-0.652-75.935-2
+	c-52.675-2.661-104.662-7-157.923-7c-54.918,0-108.52,3.225-162.931,6.003c-54.397,2.778-115.011,5.612-168.933-3.761
+	C208.403,0.094,160.967-2.678,117.15,5.342c-16.987,3.109-34.17,9.276-51.706,10.025C43.543,16.302,34.333,14.371,0,14.371"/>
 </svg>
