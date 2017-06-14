@@ -90,10 +90,28 @@ per_page: 10
           Platform
         %p
           Amazon Web Services
+        %p
+          = image_tag('AWS_Certified_Logo_SAA_294x230_Color.png', width: '220px')
+        %p
+          = image_tag('AWS_Certified_Tag__SAA_294x230-Color.png', width: '220px')
 .container-full
   .row
     .col-lg-12
       .delimiter.delimiter-04
+.container
+  .row
+    .col-lg-12.caption
+      .text-center
+        %h3
+          Presentations
+    - data.speakerdeck_presentations.each do |pre|
+      .col-lg-3.col-xs-6
+        .text-center
+          %script{type: 'text/javascript', src: '//speakerdeck.com/assets/embed.js', class: 'speakerdeck-embed', 'data-id': pre.id, 'data-ratio': pre.ratio}
+.container-full
+  .row
+    .col-lg-12
+      .delimiter.delimiter-03
 .container
   .row
     .col-lg-12.caption
