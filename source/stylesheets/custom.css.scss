@@ -69,12 +69,12 @@ a:hover {
   background: none !important;
 }
 
-a:hover:before {
+a.brace:hover:before {
   content: "{";
   color: #77869D;
 }
 
-a:hover:after {
+a.brace:hover:after {
   content: "}";
   color: #77869D;
 }

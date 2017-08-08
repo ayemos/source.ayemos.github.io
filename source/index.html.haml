@@ -98,10 +98,11 @@ per_page: 10
           Platform
         %p
           Amazon Web Services
-        %p
-          = image_tag('AWS_Certified_Logo_SAA_294x230_Color.png', width: '220px')
-        %p
-          = image_tag('AWS_Certified_Tag__SAA_294x230-Color.png', width: '220px')
+        = link_to 'https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2017-05-31&ci=AWS00207276' do
+          %p
+            = image_tag('AWS_Certified_Logo_SAA_294x230_Color.png', width: '220px')
+          %p
+            = image_tag('AWS_Certified_Tag__SAA_294x230-Color.png', width: '220px')
 .container-full
   .row
     .col-lg-12
