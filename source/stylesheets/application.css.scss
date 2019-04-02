@@ -1,11 +1,233 @@
-@import "./custom.css.scss";
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
 
-#wrapper {
+body {
+  font-family: 'Noto Serif JP', sans-serif;
+  color: #4f4f4f;
 }
 
-@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+h2 {
+  font-size: 24px;
+}
 
-body,h1,h2,h3,h4{
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 100;
+h3 {
+  font-size: 14px;
+}
+
+a.animated-link {
+  color: #4f4f4f;
+  text-decoration: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-property: all;
+
+  display: block;
+
+  &:hover{
+    color: red;
+    opacity: .5;
+    text-decoration: none;
+  }
+}
+
+
+$sp: 480px;
+$tab: 680px;
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+};
+
+@mixin tab {
+  @media (min-width: ($sp)) and (max-width: ($tab)) {
+    @content;
+  }
+};
+
+@mixin pc {
+  @media (min-width: ($tab)) {
+    @content;
+  }
+};
+
+.media-container {
+  @include sp {
+    padding: 0 15px;
+    margin: 0 0 30px 0;
+  };
+
+  @include tab {
+    margin: 0 auto;
+    width: 600px;
+  };
+
+  @include pc {
+    margin: 0 auto;
+    width: 600px;
+  }
+}
+
+.profile-header {
+  margin: 5rem 0;
+
+  justify-content: space-between;
+
+  @include sp {
+    justify-content: center;
+  }
+
+  .profile-header-name {
+    font-size: 24px;
+  }
+
+  .profile-header-portrait {
+    height: 160px;
+    width: 160px;
+    background-image: url(/images/portrait.jpg);
+    background-size: contain;
+    filter: blur(7px);
+
+    @include sp {
+      margin-top: 50px;
+    }
+  }
+
+  .profile-header-icons {
+    div {
+      text-align: center;
+      width: 40px;
+    }
+
+    .profile-header-icon-twitter {
+      img {
+        height: 30px;
+      }
+    }
+
+    .profile-header-icon-facebook {
+      img {
+        height: 30px;
+      }
+    }
+
+    .profile-header-icon-github {
+      img {
+        height: 30px;
+      }
+    }
+
+    .profile-header-icon-medium {
+      img {
+        height: 24px;
+      }
+    }
+
+    .profile-header-icon-mail {
+      img {
+        height: 26px;
+      }
+    }
+  }
+}
+
+
+
+.group-experience {
+  .item-experience-header {
+    .item-experience-date {
+      font-size: 9px;
+    }
+  }
+
+  .item-experience-body {
+    p {
+      font-size: 12px;
+    }
+  }
+
+  @include sp {
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.group-aws {
+  .aws-certified-logo {
+    img {
+      height: 30px;
+    }
+  }
+
+  .aws-certified-tag {
+    margin-top: -3px;
+
+    img {
+      height: 14px;
+    }
+  }
+}
+
+.group-presentation {
+  .item-presentation {
+    width: 49%;
+
+    @include sp {
+      width: 100%;
+    }
+  }
+}
+
+.relative-16-9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.group-slide {
+  .item-slide {
+    width: 49%;
+
+    @include sp {
+      width: 100%;
+    }
+  }
+}
+
+.copyright {
+  font-size: 9px;
+  text-align: center;
+}
+
+.delimiter {
+  background-image: url('/images/navbar_border.svg');
+  background-repeat: repeat-x;
+  overflow: hidden;
+  height: 20px;
+  padding: 60px 0;
+}
+
+.delimiter-01 {
+  background-position: -60vw 50%;
+}
+
+.delimiter-02 {
+  background-position: 30vw 50%;
+}
+
+.delimiter-03 {
+  background-position: 60vw 50%;
+}
+
+.delimiter-04 {
+  background-position: 40vw 50%;
 }

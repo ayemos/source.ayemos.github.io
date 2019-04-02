@@ -3,202 +3,112 @@ pageable: true
 per_page: 10
 ---
 
-.container#profile
-  .row
-    .col-lg-12
-      .text-center
-        %h1
-          ayemos [Yuichiro Someya]
-        %p
-          Research Engineer at Cookpad Inc. (
-          %a{href: 'https://cookpad.com/'} JP
-          \/
-          %a{href: 'https://cookpad.com/us'} US )
-        %p
-          Tokyo, Japan
-        %p.id-links
-          %a{href: 'https://twitter.com/ayemos_y'}
-            = image_tag('twitter.svg')
-          %a{href: 'https://facebook.com/yuichiro.someya'}
-            = image_tag('facebook.svg')
-          %a{href: 'https://github.com/ayemos'}
-            = image_tag('octocat.svg')
-          %a{href: 'https://speakerdeck.com/ayemos'}
-            = image_tag('speakerdeck.svg')
-          %a{href: 'https://cookpad.com/kitchen/14570720'}
-            = image_tag('cookpad.svg')
-          %a{href: '/gpg.pub.txt'}
-            = image_tag('gnupg.svg')
-          %a{href: '/salary'}
-            = image_tag('dollar.svg')
-    .col-lg-12
-      .text-center
-        %p
-          = image_tag('AWS_Certified_Logo_SAA_294x230_Color.png', width: '220px')
-          = link_to 'https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2017-05-31&ci=AWS00207276' do
-            %p
-              = image_tag('AWS_Certified_Tag__SAA_588x300-Color.png', height: '18px')
-          = link_to 'https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2017-10-24&ci=AWS00207276' do
-            %p
-              = image_tag('AWS_Certified_Tag__DVA_588x300-Color.png', height: '18px')
-    .col-lg-12
-      .text-center
-        = link_to 'https://www.coursera.org/account/accomplishments/certificate/4R2B9YXWTUC7' do
+
+.media-container
+  .profile-header.d-flex.flex-wrap.align-items-center
+    %div
+      .profile-header-name.mb-2
+        ayemos [Yuichiro Someya]
+      .profile-header-icons.d-flex
+        .profile-header-icon-twitter
+          %a.animated-link{href: 'https://twitter.com/ayemos_y'}
+            = image_tag('twitter.png')
+        .profile-header-icon-facebook
+          %a.animated-link{href: 'https://facebook.com/yuichiro.someya'}
+            = image_tag('facebook.png')
+        .profile-header-icon-github
+          %a.animated-link{href: 'https://github.com/ayemos'}
+            = image_tag('github.png')
+        .profile-header-icon-medium
+          %a.animated-link{href: 'https://medium.com/@ayemos'}
+            = image_tag('medium.png')
+        .profile-header-icon-mail
+          %a.animated-link{href: 'mailto:me@ayemos.me'}
+            = image_tag('mail.png')
+    .profile-header-portrait
+.w-100.delimiter.delimiter-01
+.media-container
+  .d-flex.flex-wrap.align-items-center
+    .group-experience.mr-auto
+      %h2.mb-3
+        Experiences
+      .item-experience.mb-3
+        .item-experience-header.mb-3
+          %h3.mb-1
+            フリーランスエンジニア
+          .item-experience-date
+            2019年4月 ~
+        .item-experience-body
+      .item-experience.mb-3
+        .item-experience-header.mb-3
+          %h3.mb-1
+            ソフトウェアエンジニア - クックパッド株式会社
+          .item-experience-date
+            2016年4月 ~ 2019年3月
+        .item-experience-body
           %p
-            Machine Learning by Stanford University on Coursera. Certificate earned on June 15, 2016
-.container-full
-  .row
-    .col-lg-12
-      .delimiter.delimiter-03
-.container
-  .row
-    .col-lg-12.caption
-      .text-center
-        %h2
-          Career
-    .col-xs-6
-      .text-right
+            * 機械学習基盤の構築と整備
+            %br/
+            * 料理写真の画像検索に関する研究開発
+    .group-aws
+      .aws-certified-logo
+        = image_tag('AWS_Certified_Logo_SAA_294x230_Color.png')
+      .aws-certified-tag
+        = image_tag('AWS_Certified_Tag__SAA_588x300-Color.png')
+      .aws-certified-tag
+        = image_tag('AWS_Certified_Tag__DVA_588x300-Color.png')
+.w-100.delimiter.delimiter-02
+.media-container
+  .group-presentation.mb-4
+    %h2.mb-3
+      Presentations
+    .d-flex.flex-wrap.justify-content-between
+      .item-presentation.mb-2
+        .relative-16-9
+          <iframe src="https://www.youtube.com/embed/Jw9CpQkCvpM?start=1936" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      .item-presentation.mb-2
+        .relative-16-9
+          <iframe src="https://www.youtube.com/embed/WzBW-92PsMQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  .group-slide
+    %h2.mb-3
+      Slides
+    .d-flex.flex-wrap.justify-content-between.align-items-center
+      .item-slide
+        .relative-16-9
+          <script async class="speakerdeck-embed" data-id="48cbbbb2f208464ea81ec5ff22df447c" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+      .item-slide
+        .relative-16-9
+          <script async class="speakerdeck-embed" data-id="07bee5ddeb0e4283a683aef047a08c75" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+      .item-slide
         %p
-          2016 Apr. 1st
-    .col-xs-6
-      .text-left
-        %p
-          Cookpad Inc.
-      .clearfix
-    .col-xs-6
-      .text-right
-        %p
-          2016 Mar. 31st
-    .col-xs-6.text-left
-      .text-left
-        %p
-          Master of CS
-        %p
-          Graduated School of Computer Science
-        %p
-          Tokyo Institute of Technology
-      .clearfix
-    .col-xs-6
-      .text-right
-        %p
-          2014 Apr. 1st
-    .col-xs-6
-      .text-left
-        %p
-          Internship at Cosylab @ Slovenia
-      .clearfix
-    .col-xs-6
-      .text-right
-        %p
-          2013 Apr. 1st
-    .col-xs-6
-      .text-left
-        %p
-          Graduated School of Computer Science
-        %p
-          Tokyo Institute of Technology
-      .clearfix
-    .col-xs-6
-      .text-right
-        %p
-          2009 Apr. 1st
-    .col-xs-6
-      .text-left
-        %p
-          Tokyo Institute of Technology
-      .clearfix
-    .col-xs-6
-      .text-right
-        %p
-          1990 Nov. 21th
-    .col-xs-6
-      .text-left
-        %p
-          Born.
-      .clearfix
-.container-full
-  .row
-    .col-lg-12
-      .delimiter.delimiter-02
-.container
-  .row
-    .col-lg-12.caption
-      .text-center
-        %h2
-          Presentations
-        %h3
-          = link_to 'slides', 'https://speakerdeck.com/ayemos'
-    .col-lg-6
-      .text-center
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Jw9CpQkCvpM?start=1936" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    .col-lg-6
-      .text-center
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/WzBW-92PsMQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-.container-full
-  .row
-    .col-lg-12
-      .delimiter.delimiter-01
-.container
-  .row
-    .col-lg-12.caption
-      .text-center
-        %h2
-          Media & Publications
-    .col-lg-12
-      .text-center
-        %h3
-          エンジニアHub 2018/10/30
-        %p
-          = link_to 'データサイエンティストの定義は？必要スキルは？現役データエンジニア／アナリストと考えた結論', 'https://employment.en-japan.com/engineerhub/entry/2018/10/30/110000'
-    .col-lg-12
-      .text-center
-        %h3
-          Qiita:Zine 2018/05/23
-        %p
-          = link_to 'テーマは『Machine Learning(機械学習)』Qiita × Microsoft 共催 MeetUp レポート', 'https://zine.qiita.com/event-report/qiita-x-microsoft-meetup/'
-    .col-lg-12
-      .text-center
-        %h3
-          ログミーTech 2018/03/23
-        %p
-          = link_to '機械学習を取り入れた組織・サービスにおいて発生しがちな問題と、その解決方法', 'https://logmi.jp/293708'
-    .col-lg-12
-      .text-center
-        %h3
-          2017年度 人工知能学会全国大会
-        %p
-          = link_to 'クックパッドにおけるDeep Learningを用いた料理画像判別の取り組み', 'https://kaigi.org/jsai/webprogram/2017/paper-740.html'
-    .col-lg-12
-      .text-center
-        %h3
-          ITPro 2017/06/01
-        %p
-          = link_to 'クックパッド、料理写真の自動抽出を支える「機械学習基盤」を解説', 'http://itpro.nikkeibp.co.jp/atcl/column/17/052600214/060100007/'
-    .col-lg-12
-      .text-center
-        %h3
-          エンジニアHub 2017/04/24
-        %p
-          = link_to '機械学習の取り組みを次々と実装！ クックパッドの“即戦力”新卒エンジニアが活躍できる背景とは', 'https://employment.en-japan.com/engineerhub/entry/2017/03/24/110000'
-.container-full
-  .row
-    .col-lg-12
-      .delimiter.delimiter-03
-.container
-  .row
-    .col-lg-12.caption
-      .text-center
-        %h2
-          Works & Activities
-    .col-lg-12
-      .text-center
-        %p
-          Co-organizing 
-          = link_to 'Tokyo Machine Learning Kitchen', 'https://www.meetup.com/ja-JP/tokyo-machine-learning-kitchen/'
-    .col-lg-12
-      .text-center
-        %p
-          OSS projects
-          (See
-          = link_to 'github', 'github.com/ayemos'
-          )
+          more slides on
+          %a.animated-link{href: "https://speakerdeck.com/ayemos"}
+            https://speakerdeck.com/ayemos
+.w-100.delimiter.delimiter-03
+.media-container
+  .group-publication.mb-4
+    %h2.mb-3
+      Media & Publications
+    %p
+      %a.animated-link{href: ""}
+        * データサイエンティストの定義は？必要スキルは？現役データエンジニア／アナリストと考えた結論 (エンジニアHub 2018/10/30)
+    %p
+      %a.animated-link{href: ""}
+        * テーマは『Machine Learning(機械学習)』Qiita × Microsoft 共催 MeetUp レポート (Qiita:Zine 2018/05/23)
+    %p
+      %a.animated-link{href: ""}
+        * 機械学習を取り入れた組織・サービスにおいて発生しがちな問題と、その解決方法 (ログミーTech 2018/03/23)
+    %p
+      %a.animated-link{href: ""}
+        * クックパッドにおけるDeep Learningを用いた料理画像判別の取り組み (2017年度 人工知能学会全国大会)
+    %p
+      %a.animated-link{href: ""}
+        * クックパッド、料理写真の自動抽出を支える「機械学習基盤」を解説 (ITPro 2017/06/01)
+    %p
+      %a.animated-link{href: ""}
+        * 機械学習の取り組みを次々と実装！ クックパッドの“即戦力”新卒エンジニアが活躍できる背景とは(エンジニアHub 2017/04/24)
+.w-100.delimiter.delimiter-04
+.media-container
+  .copyright.my-2
+    © 2019 Yuichiro Someya. all rights reserved
+
