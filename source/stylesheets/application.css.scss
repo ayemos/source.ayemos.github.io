@@ -29,6 +29,13 @@ a.animated-link {
   }
 }
 
+table {
+  td, th {
+    border-spacing: 5px;
+    border: solid 1px;
+  }
+}
+
 
 $sp: 480px;
 $tab: 680px;
