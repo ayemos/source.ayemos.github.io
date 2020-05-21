@@ -1,6 +1,7 @@
 ---
 ---
 
+= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'
 
 .media-container
   .h3.mt-3
@@ -56,3 +57,42 @@
           3,000,000
         %td
           11,914,776
+  %canvas#chart.mt-3
+
+:javascript
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log(document.getElementById('chart'));
+    var ctx = document.getElementById('chart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Apr. 2016', 'Feb. 2017', 'Feb. 2018', 'Aug. 2018', 'Feb. 2019', 'Apr. 2019'],
+        datasets: [{
+          label: 'Fulltime',
+            data: [4500000, 5604000, 6480000, 7002000, 8001000, 3000000],
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            borderWidth: 1
+          },
+          {
+            label: 'Others',
+            data: [0, 0, 730796, 502299, 339777, 11914776],
+            backgroundColor: 'rgb(54, 162, 235)',
+            borderColor: 'rgb(54, 162, 235)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          yAxes: [{
+            stacked: true
+          }],
+          xAxes: [{
+            stacked: true
+          }]
+        }
+      }
+    });
+  });
