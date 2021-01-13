@@ -1,7 +1,8 @@
 ---
 ---
 
-= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'
+= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js'
+= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'
 
 .media-container
   .h3.mt-3
@@ -57,6 +58,13 @@
           3,000,000
         %td
           11,914,776
+      %tr
+        %td
+          Jan. 2019
+        %td
+          3,000,000
+        %td
+          16,040,245
   %canvas#chart.mt-3
 
 :javascript
@@ -64,22 +72,82 @@
     console.log(document.getElementById('chart'));
     var ctx = document.getElementById('chart').getContext('2d');
     var chart = new Chart(ctx, {
-      type: 'bar',
+      type: 'line',
       data: {
-        labels: ['Apr. 2016', 'Feb. 2017', 'Feb. 2018', 'Aug. 2018', 'Feb. 2019', 'Apr. 2019'],
-        datasets: [{
-          label: 'Fulltime',
-            data: [4500000, 5604000, 6480000, 7002000, 8001000, 3000000],
+        datasets: [
+          {
+            label: 'Fulltime',
+            data: [
+              {
+                x: '2016-04-01',
+                y: 4500000,
+              },
+              {
+                x: '2017-02-01',
+                y: 5604000,
+              },
+              {
+                x: '2018-02-01',
+                y: 6480000,
+              },
+              {
+                x: '2018-08-01',
+                y: 7002000,
+              },
+              {
+                x: '2019-02-01',
+                y: 8001000,
+              },
+              {
+                x: '2019-04-01',
+                y: 3000000,
+              },
+              {
+                x: '2020-01-01',
+                y: 3000000,
+              }
+            ],
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            borderWidth: 1
+            borderWidth: 1,
+            lineTension: 0
           },
           {
             label: 'Others',
-            data: [0, 0, 730796, 502299, 339777, 11914776],
+            data: [
+              {
+                x: '2016-04-01',
+                y: 0,
+              },
+              {
+                x: '2017-02-01',
+                y: 0,
+              },
+              {
+                x: '2018-02-01',
+                y: 730796,
+              },
+              {
+                x: '2018-08-01',
+                y: 502299,
+              },
+              {
+                x: '2019-02-01',
+                y: 339777,
+              },
+              {
+                x: '2019-04-01',
+                y: 11914776,
+              },
+              {
+                x: '2020-01-01',
+                y: 16160235,
+              }
+            ],
             backgroundColor: 'rgb(54, 162, 235)',
             borderColor: 'rgb(54, 162, 235)',
-            borderWidth: 1
+            borderWidth: 1,
+            lineTension: 0
           }
         ]
       },
@@ -87,10 +155,26 @@
         responsive: true,
         scales: {
           yAxes: [{
-            stacked: true
+            stacked: true,
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: '￥'
+            }
           }],
           xAxes: [{
-            stacked: true
+            stacked: true,
+            type: 'time',
+            display: true,
+            scaleLabel: {
+              display: true
+            },
+            ticks: {
+              major: {
+                fontStyle: 'bold',
+                fontColor: '#FF0000'
+              }
+            }
           }]
         }
       }
