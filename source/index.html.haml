@@ -35,7 +35,7 @@ per_page: 10
 .w-100.delimiter.delimiter-01
 .media-container
   .d-flex.flex-wrap.align-items-center
-    .group-experience.mr-auto
+    .group-experience.mr-5
       %h2.mb-3
         Experiences
       .item-experience.mb-3
@@ -58,11 +58,8 @@ per_page: 10
             * 料理写真の画像検索に関する研究開発
     .group-aws
       .aws-certified-logo
-        = image_tag('AWS_Certified_Logo_SAA_294x230_Color.png')
-      .aws-certified-tag
-        = image_tag('AWS_Certified_Tag__SAA_588x300-Color.png')
-      .aws-certified-tag
-        = image_tag('AWS_Certified_Tag__DVA_588x300-Color.png')
+        = link_to 'https://www.credly.com/badges/6dd7d369-938f-4ce6-acce-7d4dc535a48e/public_url' do
+          = image_tag('aws-certified-solutions-architect-professional.png')
 .w-100.delimiter.delimiter-02
 .media-container
   .group-presentation.mb-4
