@@ -27,7 +27,7 @@ jobs:
         id: build
         run: |
           bundle exec middleman build
-oon:
+on:
   push:
     branches:
       - master
