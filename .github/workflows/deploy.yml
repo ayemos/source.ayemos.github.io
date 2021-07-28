@@ -24,14 +24,20 @@ jobs:
           path: |
             ./bundle
           key: ${{ runner.os }}-${{ hashFiles('Gemfile.lock') }}
-      - name: Bundle Build
-        id: bundlebuild
+      - name: Bundle
+        id: bundle
         run: |
           bundle install --path ./bundle
       - name: Build
         id: build
         run: |
           bundle exec middleman build
+      - name: Deploy
+        id: deploy
+        run: |
+          aws s3 sync build s3://ayemos.me/ --delete
+          aws cloudfront create-invalidation --distribution-id E32JPEMW3VBYZ --paths '/*'
+
 on:
   push:
     branches:
