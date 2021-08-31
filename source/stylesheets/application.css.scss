@@ -93,7 +93,7 @@ $tab: 680px;
     width: 160px;
     background-image: url(/images/portrait.jpg);
     background-size: contain;
-    filter: blur(5px);
+    filter: blur(3px);
 
     @include sp {
       margin-top: 50px;
