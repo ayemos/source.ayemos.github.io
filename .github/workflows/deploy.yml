@@ -1,4 +1,4 @@
-name: build-staging
+name: Deploy
 jobs:
   build:
     name: Build app
@@ -42,3 +42,4 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
